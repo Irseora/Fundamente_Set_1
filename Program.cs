@@ -79,9 +79,9 @@ namespace Set1
                 case 16: Crescator5(indicatii[16]);       break;
                 // TODO: case 17: Euclid(indicatii[17]);           break;
                 // TODO: case 18: FactoriPrimi(indicatii[18]);     break;
-                // TODO: case 19: Doar2Cif(indicatii[19]);         break;
+                case 19: Doar2Cif(indicatii[19]);         break;
                 // TODO: case 20: FractiiPeriodice(indicatii[20]); break;
-                // TODO: case 21: CautareBinara(indicatii[21]);    break;
+                case 21: CautareBinara(indicatii[21]);    break;
 
                 default: break;
             }
@@ -521,25 +521,76 @@ namespace Set1
 
         }
 
-        // TODO:
         // 19. Determinati daca un numar e format doar cu 2 cifre care se pot repeta.
         static void Doar2Cif(string indicatie)
         {
+            Console.Clear();
+            Console.WriteLine(indicatie + "\n");
+
+            Console.WriteLine("Introduceti un numar: ");
+            string numar = Console.ReadLine();
+
+            bool doar2Cif = true;
+            char cif1 = numar[0], cif2 = ' ';
+            int i = 1, lungime = numar.Length;
+
+            if (lungime < 2)
+                doar2Cif = false;
+
+            while (i < lungime && doar2Cif)
+            {
+                if (numar[i] != cif1 && numar[i] != cif2)
+                {
+                    if (cif2 == ' ')
+                        cif2 = numar[i];
+                    else
+                        doar2Cif = false;
+                }
+
+                i++;
+            }
+
+            if (doar2Cif)
+                Console.WriteLine($"Numarul {numar} este format doar cu 2 cifre care se repeta.");
+            else
+                Console.WriteLine($"Numarul {numar} nu este format doar cu 2 cifre care se repeta.");
 
         }
 
         // TODO:
         // 20. Afisati fractia m/n in format zecimal, cu perioada intre paranteze (daca e cazul).
+        // O fractie este neperiodica daca numitorul este de forma 2^m*5^n unde m si n sunt mai mari sau egale decat 0.
+        // O fractie este periodica simpla daca numitorul nu se divide cu 2 si nici cu 5.
+        // O fractie este periodica mixta daca se divide cu 2 si/sau 5 SI se mai divide si cu alte numere prime diferite de 2 si 5.
         static void FractiiPeriodice(string indicatie)
         {
-
+            
         }
 
-        // TODO:
-        // 21. Ghiciti un numar intre 1 si 1024 prin intrebari de forma "Numarul este mai mare sau egal decat x?"
+        // TODO: 21. Ghiciti un numar intre 1 si 1024 prin intrebari de forma "Numarul este mai mare sau egal decat x?"
         static void CautareBinara(string indicatie)
         {
+            Console.Clear();
+            Console.WriteLine(indicatie + "\n");
+            Console.WriteLine("Ganditi-va la un numar intre 1 si 1024.\n");
 
+            string raspuns = "";
+
+            // Cautare binara
+            int limJos = 1, limSus = 1024, tip = -1;
+            while (limJos < limSus)
+            {
+                tip = (limJos + limSus) / 2;
+                Console.WriteLine($"Numarul este mai mare sau egal decat {tip}?");
+                raspuns = Console.ReadLine();
+
+                if (raspuns == "nu")
+                    limSus = tip - 1;
+                else
+                    limJos = tip;
+            }
+
+            Console.WriteLine($"Numarul gandit: {tip}");
         }
     }
 }
