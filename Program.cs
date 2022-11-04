@@ -564,7 +564,7 @@ namespace Set1
         // O fractie este periodica mixta daca se divide cu 2 si/sau 5 SI se mai divide si cu alte numere prime diferite de 2 si 5.
         static void FractiiPeriodice(string indicatie)
         {
-            
+
         }
 
         // TODO: 21. Ghiciti un numar intre 1 si 1024 prin intrebari de forma "Numarul este mai mare sau egal decat x?"
@@ -577,7 +577,7 @@ namespace Set1
             string raspuns = "";
 
             // Cautare binara
-            int limJos = 1, limSus = 1024, tip = -1;
+            int limJos = 1, limSus = 1023, tip = -1;
             while (limJos < limSus)
             {
                 tip = (limJos + limSus) / 2;
