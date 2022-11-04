@@ -515,10 +515,28 @@ namespace Set1
             Console.Clear();
             Console.WriteLine(indicatie + "\n");
 
-            Console.WriteLine("Introduceti o valoare pentru n: ");
+            Console.WriteLine("Introduceti o valoare pentru N: ");
             int n = int.Parse(Console.ReadLine());
-    
 
+            Console.WriteLine(n + " = ");
+    
+            int divizor = 2;
+            while (n > 0)
+            {
+                int nrDivizorCurent = 0;
+                while (n % divizor == 0)
+                {
+                    n /= divizor;
+                    nrDivizorCurent++;
+                }
+
+                Console.WriteLine(divizor);
+                if (nrDivizorCurent > 1)
+                    Console.WriteLine('^' + nrDivizorCurent);
+
+                if (divizor == 2) divizor++;
+                else divizor += 2;
+            }
         }
 
         // 19. Determinati daca un numar e format doar cu 2 cifre care se pot repeta.
@@ -564,7 +582,7 @@ namespace Set1
         // O fractie este periodica mixta daca se divide cu 2 si/sau 5 SI se mai divide si cu alte numere prime diferite de 2 si 5.
         static void FractiiPeriodice(string indicatie)
         {
-
+            //
         }
 
         // TODO: 21. Ghiciti un numar intre 1 si 1024 prin intrebari de forma "Numarul este mai mare sau egal decat x?"
