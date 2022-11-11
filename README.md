@@ -1,4 +1,10 @@
 # Fundamentele Programarii - Setul 1 de probleme
+    Precizari:
+    - Toate problemele se vor rezolva in C#. 
+    - Toate valorile se vor citi de la tastatura. 
+    - Rezultatele se vor afisa pe ecran (in consola). 
+    - Solutiile se vor pune intr-un repo pe GitHub.
+
     1. Rezolvati ecuatia de gradul 1 cu o necunoscuta: ax+b = 0, unde a si b sunt date de intrare. 
 
     2. Rezolvati ecuatia de gradul 2 cu o necunoscuta: ax^2 + bx + c = 0, unde a, b si c sunt date de intrare.
@@ -46,7 +52,7 @@
 
     20. Afisati fractia m/n in format zecimal, cu perioada intre paranteze (daca e cazul).
         Exemplu: 13/30 = 0.4(3).  (https://github.com/HoreaOros/ROSE2020/blob/master/2611/Program.cs)
-        O fractie este neperiodica daca numitorul este de forma 2^m*5^n unde m si n sunt mai mari sau egale decat 0
+        O fractie este neperiodica daca numitorul este de forma 2^m * 5^n unde m si n sunt mai mari sau egale decat 0
         O fractie este periodica simpla daca numitorul nu se divide cu 2 si nici cu 5. 
         O fractie este periodica mixta daca se divide cu 2 si/sau 5 SI se mai divide si cu alte numere prime diferite de 2 si 5. 
 
