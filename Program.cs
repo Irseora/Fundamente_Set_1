@@ -77,17 +77,16 @@ namespace Set1
                 case 14: Palindrom(indicatii[14]);        break;
                 case 15: Crescator3(indicatii[15]);       break;
                 case 16: Crescator5(indicatii[16]);       break;
-                // TODO: case 17: Euclid(indicatii[17]);           break;
+                case 17: Euclid(indicatii[17]);           break;
                 case 18: FactoriPrimi(indicatii[18]);     break;
                 case 19: Doar2Cif(indicatii[19]);         break;
-                // TODO: case 20: FractiiPeriodice(indicatii[20]); break;
+                case 20: FractiiPeriodice(indicatii[20]); break;
                 case 21: CautareBinara(indicatii[21]);    break;
 
                 default: break;
             }
         }
 
-        // TODO: test
         // 1. Rezolvati ecuatia de gradul 1 cu o necunoscuta: ax+b = 0, unde a si b sunt date de intrare.
         static void EcGrad1(string indicatie)
         {
@@ -111,7 +110,6 @@ namespace Set1
                 Console.Write(-b/a);
         }
     
-        // TODO: test
         // 2. Rezolvati ecuatia de gradul 2 cu o necunoscuta: ax^2 + bx + c = 0, unde a, b si c sunt date de intrare.
         // Tratati toate cazurile posibile.
         static void EcGrad2(string indicatie)
@@ -335,7 +333,7 @@ namespace Set1
             }
         }
 
-        // 10. Test de primalitate: determinati daca un numar n este prim.
+        // TODO: 10. Test de primalitate: determinati daca un numar n este prim.
         static void Primalitate(string indicatie)
         {
             Console.Clear();
@@ -394,7 +392,6 @@ namespace Set1
             Console.WriteLine($"In intervalul [{a}, {b}] sunt {nr} numere divizibile cu {n}.");
         }
 
-        // TODO: test
         // 13. Determinati cati ani bisecti sunt intre anii y1 si y2.
         static void CatiBisecti(string indicatie)
         {
@@ -496,8 +493,7 @@ namespace Set1
             Console.WriteLine($"In ordine crescatoare: {a} {b} {c} {d} {e}");
         }
 
-        // TODO:
-        // 17. Determinati cel mai mare divizor comun si cel mai mic multiplu comun a doua numere.
+        // TODO: 17. Determinati cel mai mare divizor comun si cel mai mic multiplu comun a doua numere.
         // Folositi algoritmul lui Euclid.
         static void Euclid(string indicatie)
         {
@@ -508,23 +504,25 @@ namespace Set1
             string[] input = Console.ReadLine().Split(' ');
             int a = int.Parse(input[0]), b = int.Parse(input[1]);
 
+            if (b > a)
+            {
+                int aux = a;
+                a = b;
+                b = aux;
+            }
+
             int copyA = a, copyB = b;
             while (copyA != 0)
             {
                 int rest = copyA % copyB;
                 copyA = copyB;
-                b = rest;
+                copyB = rest;
             }
 
-            Console.WriteLine($"Cel mai mare divizor comun: {a}")
-            Console.Write($"Cel mai mic multiplu comun: {a}");
-
-            a*b = cmmdc * cmmmc
-            cmmmc = a*b/cmmdc
-
+            Console.WriteLine($"Cel mai mare divizor comun ({a}, {b}): {copyA}");
+            Console.Write($"Cel mai mic multiplu comun [{a}, {b}]: {a*b/copyA}");
         }
 
-        // TODO: test
         // 18. Afisati descompunerea in factori primi ai unui numar n.
         static void FactoriPrimi(string indicatie)
         {
@@ -625,7 +623,7 @@ namespace Set1
             //
         }
 
-        // TODO: 21. Ghiciti un numar intre 1 si 1024 prin intrebari de forma "Numarul este mai mare sau egal decat x?"
+        // 21. Ghiciti un numar intre 1 si 1024 prin intrebari de forma "Numarul este mai mare sau egal decat x?"
         static void CautareBinara(string indicatie)
         {
             Console.Clear();
@@ -636,11 +634,16 @@ namespace Set1
 
             // Cautare binara
             int limJos = 1, limSus = 1023, mijloc = 0;
-            while (limJos < limSus)
+            while (limJos <= limSus && raspuns != "egal" && raspuns != "Egal")
             {
                 mijloc = (limJos + limSus) / 2;
-            
+                Console.WriteLine($"\nNumarul este mai mic, mai mare sau egal cu {mijloc}?");
+                raspuns = Console.ReadLine();
 
+                if (raspuns == "Mai mic" || raspuns == "mai mic")
+                    limSus = mijloc - 1;
+                else
+                    limJos = mijloc + 1;
             }
 
             Console.WriteLine($"Numarul gandit: {mijloc}");
