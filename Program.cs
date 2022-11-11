@@ -68,7 +68,7 @@ namespace Set1
                 case  5: CifraK(indicatii[5]);            break;
                 case  6: LaturiTriunghi(indicatii[6]);    break; 
                 case  7: Swap(indicatii[7]);              break;
-                // TODO: case  8: SwapRestrictionat(indicatii[8]); break;
+                case  8: SwapRestrictionat(indicatii[8]); break;
                 case  9: Divizori(indicatii[9]);          break;
                 case 10: Primalitate(indicatii[10]);      break;
                 case 11: Oglindit(indicatii[11]);         break;
@@ -293,7 +293,6 @@ namespace Set1
             Console.WriteLine($"Valorile inversate: {a} {b}");
         }
 
-        // TODO:
         // 8. (Swap restrictionat) Se dau doua variabile numerice a si b ale carori valori sunt date de intrare.
         // Se cere sa se inverseze valorile lor fara a folosi alte variabile suplimentare.
         static void SwapRestrictionat(string indicatie)
@@ -305,7 +304,11 @@ namespace Set1
             string[] input = Console.ReadLine().Split(' ');
             int a = int.Parse(input[0]), b = int.Parse(input[1]);
 
+            a = a + b;
+            b = a - b;
+            a = a - b;
 
+            Console.WriteLine($"Valorile inversate: {a} {b}");
         }
 
         // 9. Afisati toti divizorii numarului n.
