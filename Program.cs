@@ -567,9 +567,9 @@ namespace Set1
                     if (divizor == 2) divizor++;
                     else divizor += 2;
 
-                    // Daca mai urmeaza factori primi, afiseaza semnul * delimitator
+                    // Daca mai urmeaza factori primi, afiseaza semnul de inmultire delimitator
                     if (divizor <= n && nrDivizorCurent > 0)
-                        Console.Write(" * ");
+                        Console.Write(" x ");
                 }
 
                 Console.WriteLine();
