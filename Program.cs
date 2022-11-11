@@ -87,6 +87,8 @@ namespace Set1
             }
         }
 
+        // -------------------------------------------------- REZOLVARI ------------------------------------------------------------------
+
         // 1. Rezolvati ecuatia de gradul 1 cu o necunoscuta: ax+b = 0, unde a si b sunt date de intrare.
         static void EcGrad1(string indicatie)
         {
@@ -333,7 +335,7 @@ namespace Set1
             }
         }
 
-        // TODO: 10. Test de primalitate: determinati daca un numar n este prim.
+        // TODO: opt. 10. Test de primalitate: determinati daca un numar n este prim.
         static void Primalitate(string indicatie)
         {
             Console.Clear();
@@ -493,7 +495,7 @@ namespace Set1
             Console.WriteLine($"In ordine crescatoare: {a} {b} {c} {d} {e}");
         }
 
-        // TODO: 17. Determinati cel mai mare divizor comun si cel mai mic multiplu comun a doua numere.
+        // 17. Determinati cel mai mare divizor comun si cel mai mic multiplu comun a doua numere.
         // Folositi algoritmul lui Euclid.
         static void Euclid(string indicatie)
         {
@@ -504,15 +506,8 @@ namespace Set1
             string[] input = Console.ReadLine().Split(' ');
             int a = int.Parse(input[0]), b = int.Parse(input[1]);
 
-            if (b > a)
-            {
-                int aux = a;
-                a = b;
-                b = aux;
-            }
-
             int copyA = a, copyB = b;
-            while (copyA != 0)
+            while (copyB != 0)
             {
                 int rest = copyA % copyB;
                 copyA = copyB;
@@ -583,7 +578,7 @@ namespace Set1
             Console.Clear();
             Console.WriteLine(indicatie + "\n");
 
-            Console.WriteLine("Introduceti un numar: ");
+            Console.Write("Introduceti un numar: ");
             string numar = Console.ReadLine();
 
             bool doar2Cif = true;
@@ -613,14 +608,82 @@ namespace Set1
 
         }
 
-        // TODO:
         // 20. Afisati fractia m/n in format zecimal, cu perioada intre paranteze (daca e cazul).
         // O fractie este neperiodica daca numitorul este de forma 2^m*5^n unde m si n sunt mai mari sau egale decat 0.
         // O fractie este periodica simpla daca numitorul nu se divide cu 2 si nici cu 5.
         // O fractie este periodica mixta daca se divide cu 2 si/sau 5 SI se mai divide si cu alte numere prime diferite de 2 si 5.
         static void FractiiPeriodice(string indicatie)
         {
-            //
+            Console.Clear();
+            Console.WriteLine(indicatie + "\n");
+
+            Console.Write("Introduceti o fractie: ");
+            string[] input = Console.ReadLine().Split('/');
+            int numarator = int.Parse(input[0]), numitor = int.Parse(input[1]);
+
+            // Cel mai mare divizor comun [numarator, numitor]
+            int copyA = numarator, copyB = numitor;
+            while (copyB != 0)
+            {
+                int r = copyA % copyB;
+                copyA = copyB;
+                copyB = r;
+            }
+
+            // Forma ireductibila
+            numarator /= copyA;
+            numitor /= copyA;
+
+            // Afiseaza partea intreaga a fractiei
+            Console.Write(numarator / numitor + ",");
+
+            int parteFractionara = numarator % numitor;
+
+            // Lista resturilor partiale provenite din impartirea repetata a partii fractionare la numitor
+            List<int> resturi = new List<int>();
+            resturi.Add(parteFractionara);
+
+            // Lista cifrelor de dupa virgula
+            List<int> cifre = new List<int>();
+
+            int rest = -1;
+            bool periodica = false;
+            do
+            {
+                cifre.Add(parteFractionara * 10 / numitor);
+                rest = parteFractionara * 10 % numitor;
+
+                // Daca restul nu apare deja in lista, il adauga
+                if (!resturi.Contains(rest))
+                    resturi.Add(rest);
+                // Daca se repeta un rest => fractia este periodica
+                else
+                {
+                    periodica = true;
+                    break;
+                }
+
+                parteFractionara = rest;
+            } while (rest != 0);
+
+            // Daca fractia nu este periodica, afiseaza cifrele de dupa virgula
+            if (!periodica)
+                for (int i = 0; i < cifre.Count; i++)
+                    Console.Write(cifre[i]);
+            // Daca fractia este periodica, afiseaza intai cifrele din afara perioadei, apoi cele din perioda intre paranteze
+            else
+            {
+                for (int i = 0; i < resturi.Count; i++)
+                {
+                    // Daca a ajuns la inceputul perioadei, afiseaza paranteza deschisa
+                    if (resturi[i] == rest)
+                        Console.Write("(");
+                    
+                    Console.Write(cifre[i]);
+                }
+
+                Console.Write(")");
+            }
         }
 
         // 21. Ghiciti un numar intre 1 si 1024 prin intrebari de forma "Numarul este mai mare sau egal decat x?"
