@@ -78,7 +78,7 @@ namespace Set1
                 case 15: Crescator3(indicatii[15]);       break;
                 case 16: Crescator5(indicatii[16]);       break;
                 // TODO: case 17: Euclid(indicatii[17]);           break;
-                // TODO: case 18: FactoriPrimi(indicatii[18]);     break;
+                case 18: FactoriPrimi(indicatii[18]);     break;
                 case 19: Doar2Cif(indicatii[19]);         break;
                 // TODO: case 20: FractiiPeriodice(indicatii[20]); break;
                 case 21: CautareBinara(indicatii[21]);    break;
@@ -505,38 +505,75 @@ namespace Set1
             string[] input = Console.ReadLine().Split(' ');
             int a = int.Parse(input[0]), b = int.Parse(input[1]);
 
+            int copyA = a, copyB = b;
+            while (copyA != 0)
+            {
+                int rest = copyA % copyB;
+                copyA = copyB;
+                b = rest;
+            }
+
+            Console.WriteLine($"Cel mai mare divizor comun: {a}")
+            Console.Write($"Cel mai mic multiplu comun: {a}");
+
+            a*b = cmmdc * cmmmc
+            cmmmc = a*b/cmmdc
 
         }
 
-        // TODO:
+        // TODO: test
         // 18. Afisati descompunerea in factori primi ai unui numar n.
         static void FactoriPrimi(string indicatie)
         {
             Console.Clear();
             Console.WriteLine(indicatie + "\n");
 
-            Console.WriteLine("Introduceti o valoare pentru N: ");
+            Console.Write("Introduceti o valoare pentru N: ");
             int n = int.Parse(Console.ReadLine());
 
-            Console.WriteLine(n + " = ");
-    
-            int divizor = 2;
-            while (n > 0)
+
+            if (n != 1 && n != 0 && n != -1)
             {
-                int nrDivizorCurent = 0;
-                while (n % divizor == 0)
+                Console.Write(n + " = ");
+
+                // Daca n este negativ, afiseaza semnul -, apoi continua cu modulul lui n
+                if (n < 0)
                 {
-                    n /= divizor;
-                    nrDivizorCurent++;
+                    n = -n;
+                    Console.Write("- ");
+                }
+    
+                int divizor = 2;
+                while (divizor <= n)
+                {
+                    // Numara de cate ori se divide n cu divizorul curent
+                    int nrDivizorCurent = 0;
+                    while (n % divizor == 0)
+                    {
+                        n /= divizor;
+                        nrDivizorCurent++;
+                    }
+
+                    // Daca se divide cu divizorul curent
+                    if (nrDivizorCurent > 0)
+                        Console.Write(divizor);
+
+                    // Afiseaza puterea divizorului, daca este mai mare decat 1
+                    if (nrDivizorCurent > 1)
+                        Console.Write("^" + nrDivizorCurent);
+
+                    if (divizor == 2) divizor++;
+                    else divizor += 2;
+
+                    // Daca mai urmeaza factori primi, afiseaza semnul * delimitator
+                    if (divizor <= n && nrDivizorCurent > 0)
+                        Console.Write(" * ");
                 }
 
-                Console.WriteLine(divizor);
-                if (nrDivizorCurent > 1)
-                    Console.WriteLine('^' + nrDivizorCurent);
-
-                if (divizor == 2) divizor++;
-                else divizor += 2;
+                Console.WriteLine();
             }
+            else
+                Console.WriteLine("Nu se poate descompune in factori primi.");
         }
 
         // 19. Determinati daca un numar e format doar cu 2 cifre care se pot repeta.
@@ -595,20 +632,15 @@ namespace Set1
             string raspuns = "";
 
             // Cautare binara
-            int limJos = 1, limSus = 1023, tip = -1;
+            int limJos = 1, limSus = 1023, mijloc = 0;
             while (limJos < limSus)
             {
-                tip = (limJos + limSus) / 2;
-                Console.WriteLine($"Numarul este mai mare sau egal decat {tip}?");
-                raspuns = Console.ReadLine();
+                mijloc = (limJos + limSus) / 2;
+            
 
-                if (raspuns == "nu")
-                    limSus = tip - 1;
-                else
-                    limJos = tip;
             }
 
-            Console.WriteLine($"Numarul gandit: {tip}");
+            Console.WriteLine($"Numarul gandit: {mijloc}");
         }
     }
 }
