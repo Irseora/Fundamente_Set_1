@@ -8,6 +8,8 @@ namespace Set1
 {
     class Program
     {
+        // ---------------------------------------------- FUNCTII AJUTATOARE --------------------------------------------------------------
+
         static int Afis(string[] indicatii)
         {
             Console.Clear();
@@ -24,17 +26,19 @@ namespace Set1
             return prob;
         }
 
+        // ---------------------------------------------------- MAIN ---------------------------------------------------------------------
+
         static void Main(string[] args)
         {
             string[] indicatii = {"Setul de probleme 1:",
                                   " 1. Rezolvati ecuatia de gradul 1 cu o necunoscuta: ax+b = 0, unde a si b sunt date de intrare.",
-                                  " 2. Rezolvati ecuatia de gradul 2 cu o necunoscuta: ax^2 + bx + c = 0, unde a, b si c sunt date de intrare. Tratati toate cazurile posibile.",
+                                  " 2. Rezolvati ecuatia de gradul 2 cu o necunoscuta: ax^2 + bx + c = 0, unde a, b si c sunt date de intrare.\n    Tratati toate cazurile posibile.",
                                   " 3. Determinati daca n se divide cu k, unde n si k sunt date de intrare.",
                                   " 4. Determinati daca un an y este an bisect.",
                                   " 5. Extrageti si afisati a k-a cifra de la sfarsitul unui numar. Cifrele se numara de la dreapta la stanga.",
                                   " 6. Determinati daca trei numere pozitive a, b si c pot fi lungimile laturilor unui triunghi.",
-                                  " 7. (Swap) Se dau doua variabile numerice a si b ale carori valori sunt date de intrare. Se cere sa se inverseze valorile lor.",
-                                  " 8. (Swap restrictionat) Se dau doua variabile numerice a si b ale carori valori sunt date de intrare.\nSe cere sa se inverseze valorile lor fara a folosi alte variabile suplimentare.",
+                                  " 7. (Swap) Se dau doua variabile numerice a si b ale carori valori sunt date de intrare.\n    Se cere sa se inverseze valorile lor.",
+                                  " 8. (Swap restrictionat) Se dau doua variabile numerice a si b ale carori valori sunt date de intrare.\n    Se cere sa se inverseze valorile lor fara a folosi alte variabile suplimentare.",
                                   " 9. Afisati toti divizorii numarului n.",
                                   "10. Test de primalitate: determinati daca un numar n este prim.",
                                   "11. Afisati in ordine inversa cifrele unui numar n.",
@@ -45,7 +49,7 @@ namespace Set1
                                         // Exemplu: 121 sau 12321
                                   "15. Se dau 3 numere. Sa se afiseze in ordine crescatoare.",
                                   "16. Se dau 5 numere. Sa se afiseze in ordine crescatoare (nu folositi tablouri).",
-                                  "17. Determinati cel mai mare divizor comun si cel mai mic multiplu comun a doua numere.\nFolositi algoritmul lui Euclid.",
+                                  "17. Determinati cel mai mare divizor comun si cel mai mic multiplu comun a doua numere.\n    Folositi algoritmul lui Euclid.",
                                   "18. Afisati descompunerea in factori primi ai unui numar n.",
                                         // Exemplu: pentru n = 1176 afisati 2^3 x 3^1 x 7^2
                                   "19. Determinati daca un numar e format doar cu 2 cifre care se pot repeta.",
@@ -89,7 +93,7 @@ namespace Set1
 
         // -------------------------------------------------- REZOLVARI ------------------------------------------------------------------
 
-        // 1. Rezolvati ecuatia de gradul 1 cu o necunoscuta: ax+b = 0, unde a si b sunt date de intrare.
+        // 1. Rezolvati ecuatia de gradul 1 cu o necunoscuta: ax + b = 0, unde a si b sunt date de intrare.
         static void EcGrad1(string indicatie)
         {
             Console.Clear();
@@ -276,7 +280,7 @@ namespace Set1
             }
         }
 
-        // 7. (Swap) Se dau doua variabile numerice a si b ale carori valori sunt date de intrare. Se cere sa se inverseze valorile lor.
+        // 7. (Swap) Se dau doua variabile numerice a si b ale caror valori sunt date de intrare. Se cere sa se inverseze valorile lor.
         static void Swap(string indicatie)
         {
             Console.Clear();
@@ -335,7 +339,7 @@ namespace Set1
             }
         }
 
-        // TODO: opt. 10. Test de primalitate: determinati daca un numar n este prim.
+        // 10. Test de primalitate: determinati daca un numar n este prim.
         static void Primalitate(string indicatie)
         {
             Console.Clear();
@@ -344,18 +348,20 @@ namespace Set1
             Console.WriteLine("Introduceti o valoare pentru n: ");
             int n = int.Parse(Console.ReadLine());
 
-            bool ok = true;
-            int i = 2, rad = (int)Math.Sqrt(n);
-            while (i <= rad && ok)
-            {
-                if (n % i == 0)
-                    ok = false;
+            bool prim = true;
 
-                if (i == 2) i++;
-                else i += 2;
-            }
+            if (n < 2)
+                prim = false;
+            else if (n == 2)
+                prim = true;
+            else if (n % 2 == 0)
+                prim = false;
+            else
+                for (int div = 3; div * div <= n; div += 2)
+                    if (n % div == 0)
+                        prim = false;
 
-            if (ok) Console.WriteLine($"Da, {n} este prim.");
+            if (prim) Console.WriteLine($"Da, {n} este prim.");
             else Console.WriteLine($"Nu, {n} nu este prim.");
         }
 
