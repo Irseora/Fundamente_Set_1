@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Vivi\\Documents\\Fundamente\\Fundamente_Set_1\\Fundamente_Set_1.csproj",
+      "projectUniqueName": "C:\\Users\\Vivi\\Documents\\C#\\Fundamente_Set_1\\Fundamente_Set_1.csproj",
       "projectName": "Fundamente_Set_1",
-      "projectPath": "C:\\Users\\Vivi\\Documents\\Fundamente\\Fundamente_Set_1\\Fundamente_Set_1.csproj",
+      "projectPath": "C:\\Users\\Vivi\\Documents\\C#\\Fundamente_Set_1\\Fundamente_Set_1.csproj",
       "packagesPath": "C:\\Users\\Vivi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Vivi\\Documents\\Fundamente\\Fundamente_Set_1\\obj\\",
+      "outputPath": "C:\\Users\\Vivi\\Documents\\C#\\Fundamente_Set_1\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Vivi\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -49,8 +49,7 @@
           "net47",
           "net471",
           "net472",
-          "net48",
-          "net481"
+          "net48"
         ],
         "assetTargetFallback": true,
         "warn": true,
@@ -59,7 +58,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
       }
     }
   }
