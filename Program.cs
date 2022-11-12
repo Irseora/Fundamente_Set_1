@@ -17,7 +17,7 @@ namespace Set1
                 Console.WriteLine(indicatii[i]);
             
             int prob = 0;
-            while (prob < 1)
+            while (prob < 1 || prob > 21)
             {
                 Console.WriteLine("\nAlegeti o problema din lista: ");
                 prob = int.Parse(Console.ReadLine());
