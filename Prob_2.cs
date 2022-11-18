@@ -26,16 +26,16 @@ namespace Rezolvari
             {
                 if (b == 0)  // a=0, b=0
                 {
-                    if (c == 0)  // a=0, b=0, c=0
+                    if (c == 0)  // E: 0 = 0
                         Console.WriteLine("x = orice numar real");
-                    else  // a=0, b=0, c!=0  =>  c=0 "Fals"
+                    else  // E: c = 0, dar c != 0
                         Console.WriteLine("Ecuatia nu are solutie in multimea numerelor reale");
                 }
                 else  // a=0, b!=0
                 {
-                    if (c == 0)  // a=0, b!=0, c=0  =>  bx = 0
+                    if (c == 0)  // E: bx = 0
                         Console.WriteLine("x = 0");
-                    else  // a=0, b!=0, c!=0  => bx + c = 0
+                    else  // E: bx + c = 0
                         Console.WriteLine("x = " + -c/b);
                 }
             }
@@ -43,16 +43,16 @@ namespace Rezolvari
             {
                 if (b == 0)  // a!=0, b=0
                 {
-                    if (c == 0)  // a!=0, b=0, c=0  =>  ax^2 = 0
+                    if (c == 0)  // E: ax^2 = 0
                         Console.WriteLine("x = 0");
-                    else  // a!=0, b=0, c!=0  =>  ax^2 + c = 0
+                    else  // E: ax^2 + c = 0
                         Console.WriteLine("x = " + Math.Sqrt(-c/a));
                 }
                 else  // a!=0, b!=0
                 {
-                    if (c == 0)  // a!=0, b!=0, c=0  =>  ax^2 + bx = 0  =>  x * (ax + b) = 0
+                    if (c == 0)  // E: ax^2 + bx = 0  => E: x * (ax + b) = 0
                         Console.WriteLine("x1 = 0, x2 = " + (-b/a));
-                    else  // a!=0, b!=0, c!=0  =>  ax^2 + bx + c = 0
+                    else  // E: ax^2 + bx + c = 0
                     {
                         double delta = b*b - 4*a*c;
                         if (delta > 0)

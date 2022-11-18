@@ -29,7 +29,7 @@ namespace Rezolvari
                     Console.Write("x = Orice numar real");
                 // E: b = 0, dar b != 0
                 else
-                    Console.Write("Nu exista solutie");
+                    Console.Write("Nu exista solutie in multimea numerelor reale");
             }
             // E: ax + b = 0
             else
