@@ -5,7 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 using Rezolvari;
 
-
 namespace Set1
 {
     class Program
