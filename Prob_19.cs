@@ -27,20 +27,26 @@ namespace Rezolvari
 
             while (i < lungime && doar2Cif)
             {
+                // Daca gaseste o cifra diferita de prima cifra
                 if (numar[i] != cif1 && numar[i] != cif2)
                 {
+                    // Daca este prima cifra diferita de cif1
                     if (cif2 == ' ')
                         cif2 = numar[i];
+                    // Daca nu este prima cifra diferita => numarul este format din > 2 cifre
                     else
                         doar2Cif = false;
                 }
-
                 i++;
             }
 
+            // Daca nu a gasit nicio cifra diferita de prima cifra
+            if (cif2 == ' ')
+                doar2Cif = false;
+
             if (doar2Cif)
                 Console.WriteLine($"Numarul {numar} este format doar cu 2 cifre care se repeta.");
-            else
+            else 
                 Console.WriteLine($"Numarul {numar} nu este format doar cu 2 cifre care se repeta.");
 
         }

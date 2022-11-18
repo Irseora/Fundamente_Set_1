@@ -15,7 +15,7 @@ namespace Rezolvari
             Console.Clear();
             Console.WriteLine(indicatie + "\n");
 
-            Console.WriteLine("Introduceti o valoare pentru n: ");
+            Console.Write("Introduceti o valoare pentru n: ");
             int n = int.Parse(Console.ReadLine());
 
             int auxN = n, oglindit = 0;

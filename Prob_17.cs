@@ -16,7 +16,7 @@ namespace Rezolvari
             Console.Clear();
             Console.WriteLine(indicatie + "\n");
 
-            Console.WriteLine("Introduceti 2 numere intregi: ");
+            Console.Write("Introduceti 2 numere intregi: ");
             string[] input = Console.ReadLine().Split(' ');
             int a = int.Parse(input[0]), b = int.Parse(input[1]);
 

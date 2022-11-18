@@ -18,7 +18,7 @@ namespace Rezolvari
             Console.Write("Introduceti o valoare pentru N: ");
             int n = int.Parse(Console.ReadLine());
 
-
+            // Numerele 1, 0 si -1 nu se pot descompune in factori primi
             if (n != 1 && n != 0 && n != -1)
             {
                 Console.Write(n + " = ");
@@ -27,7 +27,7 @@ namespace Rezolvari
                 if (n < 0)
                 {
                     n = -n;
-                    Console.Write("- ");
+                    Console.Write('-');
                 }
     
                 int divizor = 2;
@@ -56,7 +56,6 @@ namespace Rezolvari
                     if (divizor <= n && nrDivizorCurent > 0)
                         Console.Write(" x ");
                 }
-
                 Console.WriteLine();
             }
             else

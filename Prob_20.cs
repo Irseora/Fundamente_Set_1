@@ -83,8 +83,10 @@ namespace Rezolvari
                     Console.Write(cifre[i]);
                 }
 
-                Console.Write(")");
+                Console.Write(')');
             }
+
+            Console.WriteLine();
         }
     }
 }
