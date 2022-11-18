@@ -15,7 +15,7 @@ namespace Rezolvari
             Console.Clear();
             Console.WriteLine(indicatie + "\n");
 
-            Console.WriteLine("Introduceti valorile lui a si b: ");
+            Console.Write("Introduceti valorile lui a si b: ");
             string[] input = Console.ReadLine().Split(' ');
             int a = int.Parse(input[0]), b = int.Parse(input[1]);
 

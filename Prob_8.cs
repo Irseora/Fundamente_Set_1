@@ -14,15 +14,15 @@ namespace Rezolvari
         public static void SwapRestrictionat(string indicatie)
         {
             Console.Clear();
-            Console.WriteLine(indicatie + "\n");
+            Console.Write(indicatie + "\n");
 
             Console.WriteLine("Introduceti valorile lui a si b: ");
             string[] input = Console.ReadLine().Split(' ');
             int a = int.Parse(input[0]), b = int.Parse(input[1]);
 
             a = a + b;
-            b = a - b;
-            a = a - b;
+            b = a - b;  // b = a+b-b = a
+            a = a - b;  // a = a+b-a = b
 
             Console.WriteLine($"Valorile inversate: {a} {b}");
         }

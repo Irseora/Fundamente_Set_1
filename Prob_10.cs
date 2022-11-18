@@ -15,7 +15,7 @@ namespace Rezolvari
             Console.Clear();
             Console.WriteLine(indicatie + "\n");
 
-            Console.WriteLine("Introduceti o valoare pentru n: ");
+            Console.Write("Introduceti o valoare pentru n: ");
             int n = int.Parse(Console.ReadLine());
 
             bool prim = true;
@@ -27,6 +27,7 @@ namespace Rezolvari
             else if (n % 2 == 0)
                 prim = false;
             else
+                // Daca se gaseste un divizor, n nu este prim
                 for (int div = 3; div * div <= n; div += 2)
                     if (n % div == 0)
                         prim = false;

@@ -15,10 +15,11 @@ namespace Rezolvari
             Console.Clear();
             Console.WriteLine(indicatie + "\n");
 
-            Console.WriteLine("Introduceti anii y1 si y2: ");
+            Console.Write("Introduceti anii y1 si y2: ");
             string[] input = Console.ReadLine().Split(' ');
             int y1 = int.Parse(input[0]), y2 = int.Parse(input[1]);
 
+            // Daca y1 > y2, le inverseaza
             if (y1 > y2)
             {
                 int aux = y1;
@@ -37,6 +38,7 @@ namespace Rezolvari
                     an++;
             }
 
+            // TODO:
             int nr = 0;
             while (an <= y2)
             {

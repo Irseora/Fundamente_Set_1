@@ -15,7 +15,7 @@ namespace Rezolvari
             Console.Clear();
             Console.WriteLine(indicatie + "\n");
 
-            Console.WriteLine("Introduceti valorile lui n si k: ");
+            Console.Write("Introduceti valorile lui n si k: ");
             string[] input = Console.ReadLine().Split(' ');
             int n = int.Parse(input[0]), k = int.Parse(input[1]);
 
@@ -23,9 +23,9 @@ namespace Rezolvari
             
             Console.Write($"A {k}-a cifra de la sfarsitul lui {n} este ");
             if (putere > n)
-                Console.WriteLine("0.");
+                Console.WriteLine('0');
             else
-                Console.WriteLine(n % putere / (putere/10) + ".");
+                Console.WriteLine(n % putere / (putere/10));
         }
     }
 }

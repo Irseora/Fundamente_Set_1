@@ -16,7 +16,7 @@ namespace Rezolvari
             Console.Clear();
             Console.WriteLine(indicatie + "\n");
 
-            Console.WriteLine("Introduceti valorile indicilor a, b si c: ");
+            Console.Write("Introduceti valorile indicilor a, b si c: ");
             string[] input = Console.ReadLine().Split(' ');
             double a = double.Parse(input[0]), b = double.Parse(input[1]), c = double.Parse(input[2]);
 

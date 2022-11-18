@@ -15,7 +15,7 @@ namespace Rezolvari
             Console.Clear();
             Console.WriteLine(indicatie + "\n");
 
-            Console.WriteLine("Introduceti valorile celor 3 laturi: ");
+            Console.Write("Introduceti valorile celor 3 laturi: ");
             string[] input = Console.ReadLine().Split(' ');
             int a = int.Parse(input[0]), b = int.Parse(input[1]), c = int.Parse(input[2]);
             bool ok = true;

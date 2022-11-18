@@ -15,7 +15,7 @@ namespace Rezolvari
             Console.Clear();
             Console.WriteLine(indicatie + "\n");
 
-            Console.WriteLine("Introduceti un an: ");
+            Console.Write("Introduceti un an: ");
             int y = int.Parse(Console.ReadLine());
 
             if (y % 400 == 0 || (y % 4 == 0 && y % 100 != 0))

@@ -15,15 +15,20 @@ namespace Rezolvari
             Console.Clear();
             Console.WriteLine(indicatie + "\n");
 
-            Console.WriteLine("Introduceti o valoare pentru n: ");
+            Console.Write("Introduceti o valoare pentru n: ");
             int n = int.Parse(Console.ReadLine());
 
             int i = 1, rad = (int)Math.Sqrt(n);
+
+            // Divizorii unui numar se gasesc intre 1 si radicalul numarului,
+            // divizorii ramasi pot fi calculati prin n/i
             while (i <= rad)
             {
                 if (n % i == 0)
                 {
                     Console.Write($"{i} ");
+
+                    // Daca i | n => n/i | n
                     if (i != n/i)
                         Console.Write($"{n/i} ");
                 }
