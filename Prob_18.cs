@@ -10,6 +10,8 @@ namespace Rezolvari
 {
     class Prob_18
     {
+        /// <summary> Afiseaza descompunerea in factori primi ai unui numar n
+        /// Date de intrare: n </summary>
         public static void FactoriPrimi(string indicatie)
         {
             Console.Clear();

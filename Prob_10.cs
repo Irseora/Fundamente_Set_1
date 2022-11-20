@@ -10,6 +10,8 @@ namespace Rezolvari
 {
     class Prob_10
     {
+        /// <summary> Determina daca un numar n este prim
+        /// Date de intrare: n </summary>
         public static void Primalitate(string indicatie)
         {
             Console.Clear();

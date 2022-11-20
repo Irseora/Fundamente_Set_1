@@ -10,6 +10,8 @@ namespace Rezolvari
 {
     class Prob_11
     {
+        /// <summary> Afiseaza in ordine inversa cifrele numarului n
+        /// Date de intrare: n </summary>
         public static void Oglindit(string indicatie)
         {
             Console.Clear();

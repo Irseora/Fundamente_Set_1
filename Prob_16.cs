@@ -10,6 +10,8 @@ namespace Rezolvari
 {
     class Prob_16
     {
+        /// <summary> Afiseaza 5 numere date in ordine crescatoare
+        /// Date de intrare: 5 numere </summary>
         public static void Crescator5(string indicatie)
         {
             Console.Clear();

@@ -10,6 +10,7 @@ namespace Rezolvari
 {
     class Prob_21
     {
+        /// <summary> Ghiceste un numar intre 1 si 1024 prin cautare binara </summary>
         public static void CautareBinara(string indicatie)
         {
             Console.Clear();

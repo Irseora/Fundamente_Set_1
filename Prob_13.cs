@@ -10,6 +10,8 @@ namespace Rezolvari
 {
     class Prob_13
     {
+        /// <summary> Determina cati ani bisecti sunt intre anii y1 si y2
+        /// Date de intrare: y1, y2 </summary>
         public static void CatiBisecti(string indicatie)
         {
             Console.Clear();

@@ -10,6 +10,8 @@ namespace Rezolvari
 {
     class Prob_19
     {
+        /// <summary> Determina daca un numar n este format doar cu 2 cifre care se pot repeta
+        /// Date de intrare: n </summary>
         public static void Doar2Cif(string indicatie)
         {
             Console.Clear();

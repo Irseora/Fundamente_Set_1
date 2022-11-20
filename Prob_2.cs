@@ -11,6 +11,8 @@ namespace Rezolvari
 {
     class Prob_2
     {
+        /// <summary> Rezolva o ecuatie de gradul 2 cu o necunoscuta: ax^2 + bx + c = 0
+        /// Date de intrare: a, b, c </summary>
         public static void EcGrad2(string indicatie)
         {
             Console.Clear();

@@ -10,6 +10,8 @@ namespace Rezolvari
 {
     class Prob_1
     {
+        /// <summary> Rezolva o ecuatie de gradul 1 cu o necunoscuta: ax + b = 0
+        /// Date de intrare: a, b </summary>
         public static void EcGrad1(string indicatie)
         {
             Console.Clear();

@@ -10,6 +10,8 @@ namespace Rezolvari
 {
     class Prob_9
     {
+        /// <summary> Afiseaza toti divizorii numarului n
+        /// Date de intrare: n </summary>
         public static void Divizori(string indicatie)
         {
             Console.Clear();

@@ -10,6 +10,8 @@ namespace Rezolvari
 {
     class Prob_7
     {
+        /// <summary> Inverseaza valorile variabilelor a si b
+        /// Date de intrare: a, b </summary>
         public static void Swap(string indicatie)
         {
             Console.Clear();

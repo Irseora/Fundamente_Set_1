@@ -10,6 +10,8 @@ namespace Rezolvari
 {
     class Prob_3
     {
+        /// <summary> Determina daca un numar n se divide cu un numar k
+        /// Date de intrare: n, k </summary>
         public static void DivizibilK(string indicatie)
         {
             Console.Clear();
