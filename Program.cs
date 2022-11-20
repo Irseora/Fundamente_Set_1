@@ -10,6 +10,8 @@ namespace Set1
     class Program
     {
         /// <summary> Afiseaza indicatiile celor 21 probleme, apoi citeste si returneaza numarul problemei dorite. </summary>
+        /// <param name="indicatii"> Indicatiile problemelor </param>
+        /// <returns> Numarul problemei alese </returns>
         static int Afis(string[] indicatii)
         {
             Console.Clear();
@@ -60,7 +62,7 @@ namespace Set1
                                         // O fractie este periodica simpla daca numitorul nu se divide cu 2 si nici cu 5.
                                         // O fractie este periodica mixta daca se divide cu 2 si/sau 5 SI se mai divide si cu alte numere prime diferite de 2 si 5.
                                   "21. Ghiciti un numar intre 1 si 1024 prin intrebari de forma \"Numarul este mai mare sau egal decat x?\"."};
-        
+
             // Apeleaza functia care rezolva problema aleasa
             int prob = Afis(indicatii);
             switch (prob)

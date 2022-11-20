@@ -10,8 +10,7 @@ namespace Rezolvari
 {
     class Prob_12
     {
-        /// <summary> Determina cate numere intregi din intervalul [a, b] sunt divizibile cu k
-        /// Date de intrare: k, a, b </summary>
+        /// <summary> Determina cate numere intregi din intervalul [a, b] sunt divizibile cu k. Date de intrare: k, a, b </summary>
         public static void CateDivN(string indicatie)
         {
             Console.Clear();

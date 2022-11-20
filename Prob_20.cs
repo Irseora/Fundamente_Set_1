@@ -13,8 +13,7 @@ namespace Rezolvari
 {
     class Prob_20
     {
-        /// <summary> Afiseaza fractia m/n in format zecimal, cu perioada unde e cazul
-        /// Date de intrare: m, n </summary>
+        /// <summary> Afiseaza fractia m/n in format zecimal, cu perioada unde e cazuL. Date de intrare: m, n </summary>
         public static void FractiiPeriodice(string indicatie)
         {
             Console.Clear();

@@ -10,8 +10,7 @@ namespace Rezolvari
 {
     class Prob_5
     {
-        /// <summary> Afiseaza a k-a cifra de la sfarsitul unui numar n
-        /// Date de intrare: k, n </summary>
+        /// <summary> Afiseaza a k-a cifra de la sfarsitul unui numar n. Date de intrare: k, n </summary>
         public static void CifraK(string indicatie)
         {
             Console.Clear();

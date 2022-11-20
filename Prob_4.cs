@@ -10,8 +10,7 @@ namespace Rezolvari
 {
     class Prob_4
     {
-        /// <summary> Determina daca un an y este bisect
-        /// Date de intrare: y </summary>
+        /// <summary> Determina daca un an y este bisect. Date de intrare: y </summary>
         public static void Bisect(string indicatie)
         {
             Console.Clear();

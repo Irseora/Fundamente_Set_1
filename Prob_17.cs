@@ -11,8 +11,7 @@ namespace Rezolvari
 {
     class Prob_17
     {
-        /// <summary> Determina cel mai mare divizor comun si cel mai mic multiplu comun a 2 numere
-        /// Date de intrare: 2 numere </summary>
+        /// <summary> Determina cel mai mare divizor comun si cel mai mic multiplu comun a 2 numere. Date de intrare: 2 numere </summary>
         public static void Euclid(string indicatie)
         {
             Console.Clear();

@@ -10,8 +10,7 @@ namespace Rezolvari
 {
     class Prob_6
     {
-        /// <summary> Determina daca 3 numere pozitive a, b, c pot fi lungimile laturilor unui triunghi
-        /// Date de intrare: a, b, c </summary>
+        /// <summary> Determina daca 3 numere pozitive a, b, c pot fi lungimile laturilor unui triunghi. Date de intrare: a, b, c </summary>
         public static void LaturiTriunghi(string indicatie)
         {
             Console.Clear();

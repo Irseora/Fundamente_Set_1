@@ -10,8 +10,7 @@ namespace Rezolvari
 {
     class Prob_14
     {
-        /// <summary> Determina daca un numar n este palindrom
-        /// Date de intrare: n </summary>
+        /// <summary> Determina daca un numar n este palindrom. Date de intrare: n </summary>
         public static void Palindrom(string indicatie)
         {
             Console.Clear();
