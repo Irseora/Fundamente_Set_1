@@ -9,6 +9,7 @@ namespace Set1
 {
     class Program
     {
+        /// <summary> Afiseaza indicatiile celor 21 probleme, apoi citeste si returneaza numarul problemei dorite. </summary>
         static int Afis(string[] indicatii)
         {
             Console.Clear();
@@ -27,6 +28,7 @@ namespace Set1
 
         static void Main(string[] args)
         {
+            // Indicatiile primului set de probleme (21)
             string[] indicatii = {"Setul de probleme 1:",
                                   " 1. Rezolvati ecuatia de gradul 1 cu o necunoscuta: ax+b = 0, unde a si b sunt date de intrare.",
                                   " 2. Rezolvati ecuatia de gradul 2 cu o necunoscuta: ax^2 + bx + c = 0, unde a, b si c sunt date de intrare.\n    Tratati toate cazurile posibile.",
@@ -59,6 +61,7 @@ namespace Set1
                                         // O fractie este periodica mixta daca se divide cu 2 si/sau 5 SI se mai divide si cu alte numere prime diferite de 2 si 5.
                                   "21. Ghiciti un numar intre 1 si 1024 prin intrebari de forma \"Numarul este mai mare sau egal decat x?\"."};
         
+            // Apeleaza functia care rezolva problema aleasa
             int prob = Afis(indicatii);
             switch (prob)
             {
