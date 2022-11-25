@@ -14,8 +14,8 @@ namespace Rezolvari
         public static void CautareBinara(string indicatie)
         {
             Console.Clear();
-            Console.WriteLine(indicatie + "\n");
-            Console.WriteLine("Ganditi-va la un numar intre 1 si 1024.\n");
+            Console.WriteLine($"{indicatie}{Environment.NewLine}");
+            Console.WriteLine($"Ganditi-va la un numar intre 1 si 1024.");
 
             string raspuns = "";
 
@@ -24,7 +24,7 @@ namespace Rezolvari
             while (limJos <= limSus && raspuns != "egal" && raspuns != "Egal")
             {
                 mijloc = (limJos + limSus) / 2;
-                Console.WriteLine($"\nNumarul este mai mic, mai mare sau egal cu {mijloc}?");
+                Console.WriteLine($"{Environment.NewLine}Numarul este mai mic, mai mare sau egal cu {mijloc}?");
                 raspuns = Console.ReadLine();
 
                 if (raspuns == "Mai mic" || raspuns == "mai mic")

@@ -14,7 +14,7 @@ namespace Rezolvari
         public static void CifraK(string indicatie)
         {
             Console.Clear();
-            Console.WriteLine(indicatie + "\n");
+            Console.WriteLine($"{indicatie}{Environment.NewLine}");
 
             Console.Write("Introduceti valorile lui n si k: ");
             string[] input = Console.ReadLine().Split(' ');

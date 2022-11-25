@@ -15,7 +15,7 @@ namespace Rezolvari
         public static void EcGrad2(string indicatie)
         {
             Console.Clear();
-            Console.WriteLine(indicatie + "\n");
+            Console.WriteLine($"{indicatie}{Environment.NewLine}");
 
             Console.Write("Introduceti valorile indicilor a, b si c: ");
             string[] input = Console.ReadLine().Split(' ');

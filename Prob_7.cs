@@ -14,7 +14,7 @@ namespace Rezolvari
         public static void Swap(string indicatie)
         {
             Console.Clear();
-            Console.WriteLine(indicatie + "\n");
+            Console.WriteLine($"{indicatie}{Environment.NewLine}");
 
             Console.Write("Introduceti valorile lui a si b: ");
             string[] input = Console.ReadLine().Split(' ');

@@ -14,7 +14,7 @@ namespace Rezolvari
         public static void Bisect(string indicatie)
         {
             Console.Clear();
-            Console.WriteLine(indicatie + "\n");
+            Console.WriteLine($"{indicatie}{Environment.NewLine}");
 
             Console.Write("Introduceti un an: ");
             int y = int.Parse(Console.ReadLine());

@@ -14,7 +14,7 @@ namespace Rezolvari
         public static void Palindrom(string indicatie)
         {
             Console.Clear();
-            Console.WriteLine(indicatie + "\n");
+            Console.WriteLine($"{indicatie}{Environment.NewLine}");
 
             Console.Write("Introduceti o valoare pentru n: ");
             int n = int.Parse(Console.ReadLine());

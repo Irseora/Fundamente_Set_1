@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "R6pL1wlZJr5/q0INf27t/ybqlPV+kdXp2W8B/SYEP4Z8aC2r6t20nECm+EEI+EzCNON4/ATzX58n++fDhf4/8A==",
+  "dgSpecHash": "RGJAtOIvvRJr9ejRWkfGmhUpqynWUTmP70eXijNY1GLbhIcBA+I1HrtZddzX3CFk8Bi890e3ZTjzvrlgA/n+PQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Vivi\\Documents\\Fundamente\\Fundamente_Set_1\\Fundamente_Set_1.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\Vivi\\Documents\\Fundamente_Set_1\\Fundamente_Set_1.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Vivi\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.11\\microsoft.netcore.app.ref.6.0.11.nupkg.sha512",
+    "C:\\Users\\Vivi\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.11\\microsoft.windowsdesktop.app.ref.6.0.11.nupkg.sha512",
+    "C:\\Users\\Vivi\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.11\\microsoft.aspnetcore.app.ref.6.0.11.nupkg.sha512",
+    "C:\\Users\\Vivi\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.11\\microsoft.netcore.app.host.win-x64.6.0.11.nupkg.sha512"
+  ],
   "logs": []
 }

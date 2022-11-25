@@ -15,7 +15,7 @@ namespace Rezolvari
         public static void Euclid(string indicatie)
         {
             Console.Clear();
-            Console.WriteLine(indicatie + "\n");
+            Console.WriteLine($"{indicatie}{Environment.NewLine}");
 
             Console.Write("Introduceti 2 numere intregi: ");
             string[] input = Console.ReadLine().Split(' ');

@@ -14,7 +14,7 @@ namespace Rezolvari
         public static void Doar2Cif(string indicatie)
         {
             Console.Clear();
-            Console.WriteLine(indicatie + "\n");
+            Console.WriteLine($"{indicatie}{Environment.NewLine}");
 
             Console.Write("Introduceti un numar: ");
             string numar = Console.ReadLine();

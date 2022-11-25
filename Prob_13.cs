@@ -14,7 +14,7 @@ namespace Rezolvari
         public static void CatiBisecti(string indicatie)
         {
             Console.Clear();
-            Console.WriteLine(indicatie + "\n");
+            Console.WriteLine($"{indicatie}{Environment.NewLine}");
 
             Console.Write("Introduceti anii y1 si y2: ");
             string[] input = Console.ReadLine().Split(' ');

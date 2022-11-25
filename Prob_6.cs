@@ -14,7 +14,7 @@ namespace Rezolvari
         public static void LaturiTriunghi(string indicatie)
         {
             Console.Clear();
-            Console.WriteLine(indicatie + "\n");
+            Console.WriteLine($"{indicatie}{Environment.NewLine}");
 
             Console.Write("Introduceti valorile celor 3 laturi: ");
             string[] input = Console.ReadLine().Split(' ');

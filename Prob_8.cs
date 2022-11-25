@@ -15,7 +15,7 @@ namespace Rezolvari
         public static void SwapRestrictionat(string indicatie)
         {
             Console.Clear();
-            Console.Write(indicatie + "\n");
+            Console.Write($"{indicatie}{Environment.NewLine}");
 
             Console.WriteLine("Introduceti valorile lui a si b: ");
             string[] input = Console.ReadLine().Split(' ');

@@ -14,7 +14,7 @@ namespace Rezolvari
         public static void FactoriPrimi(string indicatie)
         {
             Console.Clear();
-            Console.WriteLine(indicatie + "\n");
+            Console.WriteLine($"{indicatie}{Environment.NewLine}");
 
             Console.Write("Introduceti o valoare pentru N: ");
             int n = int.Parse(Console.ReadLine());

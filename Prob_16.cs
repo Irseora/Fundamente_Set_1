@@ -14,7 +14,7 @@ namespace Rezolvari
         public static void Crescator5(string indicatie)
         {
             Console.Clear();
-            Console.WriteLine(indicatie + "\n");
+            Console.WriteLine($"{indicatie}{Environment.NewLine}");
 
             Console.Write("Introduceti 5 numere intregi: ");
             string[] input = Console.ReadLine().Split(' ');
