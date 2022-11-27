@@ -11,6 +11,7 @@ namespace Rezolvari
     class Prob_5
     {
         /// <summary> Afiseaza a k-a cifra de la sfarsitul unui numar n. Date de intrare: k, n </summary>
+        /// <param name="indicatie"> Indicatia problemei pe care o rezolva functia </param>
         public static void CifraK(string indicatie)
         {
             Console.Clear();

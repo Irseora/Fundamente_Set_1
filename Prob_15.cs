@@ -11,6 +11,7 @@ namespace Rezolvari
     class Prob_15
     {
         /// <summary> Afiseaza 3 numere date in ordine crescatoare. Date de intrare: 3 numere </summary>
+        /// <param name="indicatie"> Indicatia problemei pe care o rezolva functia </param>
         public static void Crescator3(string indicatie)
         {
             Console.Clear();

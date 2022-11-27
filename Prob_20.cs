@@ -14,6 +14,7 @@ namespace Rezolvari
     class Prob_20
     {
         /// <summary> Afiseaza fractia m/n in format zecimal, cu perioada unde e cazuL. Date de intrare: m, n </summary>
+        /// <param name="indicatie"> Indicatia problemei pe care o rezolva functia </param>
         public static void FractiiPeriodice(string indicatie)
         {
             Console.Clear();

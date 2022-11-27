@@ -11,6 +11,7 @@ namespace Rezolvari
     class Prob_4
     {
         /// <summary> Determina daca un an y este bisect. Date de intrare: y </summary>
+        /// <param name="indicatie"> Indicatia problemei pe care o rezolva functia </param>
         public static void Bisect(string indicatie)
         {
             Console.Clear();

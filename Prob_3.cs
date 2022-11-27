@@ -11,6 +11,7 @@ namespace Rezolvari
     class Prob_3
     {
         /// <summary> Determina daca un numar n se divide cu un numar k. Date de intrare: n, k </summary>
+        /// <param name="indicatie"> Indicatia problemei pe care o rezolva functia </param>
         public static void DivizibilK(string indicatie)
         {
             Console.Clear();

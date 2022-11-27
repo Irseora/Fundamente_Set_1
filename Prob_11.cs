@@ -11,6 +11,7 @@ namespace Rezolvari
     class Prob_11
     {
         /// <summary> Afiseaza in ordine inversa cifrele numarului n. Date de intrare: n </summary>
+        /// <param name="indicatie"> Indicatia problemei pe care o rezolva functia </param>
         public static void Oglindit(string indicatie)
         {
             Console.Clear();

@@ -11,6 +11,7 @@ namespace Rezolvari
     class Prob_7
     {
         /// <summary> Inverseaza valorile variabilelor a si b. Date de intrare: a, b </summary>
+        /// <param name="indicatie"> Indicatia problemei pe care o rezolva functia </param>
         public static void Swap(string indicatie)
         {
             Console.Clear();

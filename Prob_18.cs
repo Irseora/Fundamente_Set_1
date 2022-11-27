@@ -11,6 +11,7 @@ namespace Rezolvari
     class Prob_18
     {
         /// <summary> Afiseaza descompunerea in factori primi ai unui numar n. Date de intrare: n </summary>
+        /// <param name="indicatie"> Indicatia problemei pe care o rezolva functia </param>
         public static void FactoriPrimi(string indicatie)
         {
             Console.Clear();

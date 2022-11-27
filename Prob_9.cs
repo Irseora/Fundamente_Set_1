@@ -11,6 +11,7 @@ namespace Rezolvari
     class Prob_9
     {
         /// <summary> Afiseaza toti divizorii numarului n. Date de intrare: n </summary>
+        /// <param name="indicatie"> Indicatia problemei pe care o rezolva functia </param>
         public static void Divizori(string indicatie)
         {
             Console.Clear();

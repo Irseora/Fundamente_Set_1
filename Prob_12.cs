@@ -11,6 +11,7 @@ namespace Rezolvari
     class Prob_12
     {
         /// <summary> Determina cate numere intregi din intervalul [a, b] sunt divizibile cu k. Date de intrare: k, a, b </summary>
+        /// <param name="indicatie"> Indicatia problemei pe care o rezolva functia </param>
         public static void CateDivN(string indicatie)
         {
             Console.Clear();

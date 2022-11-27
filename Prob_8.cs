@@ -12,6 +12,7 @@ namespace Rezolvari
     class Prob_8
     {
         /// <summary> Inverseaza valorile variabilelor a si b, fara a folosi alte variabile. Date de intrare: a, b </summary>
+        /// <param name="indicatie"> Indicatia problemei pe care o rezolva functia </param>
         public static void SwapRestrictionat(string indicatie)
         {
             Console.Clear();
