@@ -17,6 +17,7 @@ namespace Rezolvari
         {
             Console.Clear();
             Console.Write($"{indicatie}{Environment.NewLine}");
+            Console.WriteLine("------------------------------------------------------");
 
             Console.WriteLine("Introduceti valorile lui a si b: ");
             string[] input = Console.ReadLine().Split(' ');

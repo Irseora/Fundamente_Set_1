@@ -16,6 +16,7 @@ namespace Rezolvari
         {
             Console.Clear();
             Console.WriteLine($"{indicatie}{Environment.NewLine}");
+            Console.WriteLine("------------------------------------------------------");
 
             Console.Write("Introduceti 3 numere intregi: ");
             string[] input = Console.ReadLine().Split(' ');

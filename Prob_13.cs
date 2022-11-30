@@ -16,6 +16,7 @@ namespace Rezolvari
         {
             Console.Clear();
             Console.WriteLine($"{indicatie}{Environment.NewLine}");
+            Console.WriteLine("------------------------------------------------------");
 
             Console.Write("Introduceti anii y1 si y2: ");
             string[] input = Console.ReadLine().Split(' ');

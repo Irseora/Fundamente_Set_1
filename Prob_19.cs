@@ -16,6 +16,7 @@ namespace Rezolvari
         {
             Console.Clear();
             Console.WriteLine($"{indicatie}{Environment.NewLine}");
+            Console.WriteLine("------------------------------------------------------");
 
             Console.Write("Introduceti un numar: ");
             string numar = Console.ReadLine();

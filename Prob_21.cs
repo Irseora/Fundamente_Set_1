@@ -17,6 +17,7 @@ namespace Rezolvari
             Console.Clear();
             Console.WriteLine($"{indicatie}{Environment.NewLine}");
             Console.WriteLine($"Ganditi-va la un numar intre 1 si 1024.");
+            Console.WriteLine("------------------------------------------------------");
 
             string raspuns = "";
 
